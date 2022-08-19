@@ -1,0 +1,6 @@
+{
+	"function": "cache_bench_test",
+    "platform": "AWS Lambda",
+    "source": "../python_template",
+    "endpoint": ""
+}

@@ -1,0 +1,174 @@
+Build: Loading config...
+Build: Purging previous build...
+Build: Copying files...
+Build: Cleaning up...
+Build: Building Docker Image...
+Sending build context to Docker daemon  23.55kB
+Step 1/15 : FROM python:3.8-slim-buster
+ ---> c706fbd78639
+Step 2/15 : RUN apt update
+ ---> Using cache
+ ---> 9e15b7761466
+Step 3/15 : RUN apt install -y curl build-essential moreutils expect
+ ---> Using cache
+ ---> 1ff4b362dd75
+Step 4/15 : ENV FUNCTION_DIR="/var/task"
+ ---> Using cache
+ ---> 44ba2f0772c7
+Step 5/15 : RUN mkdir -p ${FUNCTION_DIR}
+ ---> Using cache
+ ---> 75739faa0e1c
+Step 6/15 : COPY . ${FUNCTION_DIR}
+ ---> 224f2884bdbf
+Step 7/15 : RUN pip install boto3 botocore
+ ---> Running in abdec8a8503f
+Collecting boto3
+  Downloading boto3-1.24.35-py3-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.5/132.5 KB 15.1 MB/s eta 0:00:00
+Collecting botocore
+  Downloading botocore-1.27.35-py3-none-any.whl (9.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.0/9.0 MB 31.0 MB/s eta 0:00:00
+Collecting jmespath<2.0.0,>=0.7.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting s3transfer<0.7.0,>=0.6.0
+  Downloading s3transfer-0.6.0-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.6/79.6 KB 14.3 MB/s eta 0:00:00
+Collecting python-dateutil<3.0.0,>=2.1
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 25.7 MB/s eta 0:00:00
+Collecting urllib3<1.27,>=1.25.4
+  Downloading urllib3-1.26.10-py2.py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.2/139.2 KB 18.7 MB/s eta 0:00:00
+Collecting six>=1.5
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: urllib3, six, jmespath, python-dateutil, botocore, s3transfer, boto3
+Successfully installed boto3-1.24.35 botocore-1.27.35 jmespath-1.0.1 python-dateutil-2.8.2 s3transfer-0.6.0 six-1.16.0 urllib3-1.26.10
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 22.0.4; however, version 22.2 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container abdec8a8503f
+ ---> 46caf6520f95
+Step 8/15 : RUN pip install         --target ${FUNCTION_DIR}         awslambdaric
+ ---> Running in 11640ccbac49
+Collecting awslambdaric
+  Downloading awslambdaric-2.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (338 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 338.4/338.4 KB 18.5 MB/s eta 0:00:00
+Collecting simplejson==3.17.2
+  Downloading simplejson-3.17.2-cp38-cp38-manylinux2010_x86_64.whl (137 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.9/137.9 KB 19.1 MB/s eta 0:00:00
+Installing collected packages: simplejson, awslambdaric
+Successfully installed awslambdaric-2.0.4 simplejson-3.17.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 22.0.4; however, version 22.2 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container 11640ccbac49
+ ---> 3b4b5efe235f
+Step 9/15 : RUN curl -Lo /usr/local/bin/aws-lambda-rie https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie
+ ---> Running in ec3d68192e7c
+[91m  % Total    % Received % Xferd  Average Speed   Time[0m[91m    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[0m[91m  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[0m[91m  3 5432k    3  200k    0     0   317k      0  0:00:17 --:--:--  0:00:17  317k[0m[91m100 5432k  100 5432k    0     0  7565k      0 --:--:-- --:--:-- --:--:-- 58.0M
+[0mRemoving intermediate container ec3d68192e7c
+ ---> 0e00b0c85c40
+Step 10/15 : RUN chmod +x /usr/local/bin/aws-lambda-rie
+ ---> Running in 85ef25262958
+Removing intermediate container 85ef25262958
+ ---> 0b1385b93940
+Step 11/15 : WORKDIR ${FUNCTION_DIR}
+ ---> Running in 371cabc4a29c
+Removing intermediate container 371cabc4a29c
+ ---> c3ba4255fad0
+Step 12/15 : COPY ./entry_script.sh /entry_script.sh
+ ---> d58071866a00
+Step 13/15 : RUN chmod +x /entry_script.sh
+ ---> Running in ee1060e1cf4b
+Removing intermediate container ee1060e1cf4b
+ ---> a5aaf7546c01
+Step 14/15 : ENTRYPOINT [ "/entry_script.sh" ]
+ ---> Running in 17f4995cbde9
+Removing intermediate container 17f4995cbde9
+ ---> 38767f131a82
+Step 15/15 : CMD [ "lambda_function.lambda_handler" ]
+ ---> Running in 9a9edf1d2b14
+Removing intermediate container 9a9edf1d2b14
+ ---> 9b5d53347896
+Successfully built 9b5d53347896
+Successfully tagged sleep_test:latest
+Loading config...
+Creating AWS Registry...
+Pushing Docker Image...
+Login Succeeded
+The push refers to repository [975118141701.dkr.ecr.us-east-2.amazonaws.com/saaf-functions]
+029ef915a322: Preparing
+89fbca15ee89: Preparing
+1f3a5420c2b8: Preparing
+ff61a758155d: Preparing
+df082735922f: Preparing
+3aace1c94832: Preparing
+61efd47635a8: Preparing
+c923ffbdf6a7: Preparing
+b52f61e16e27: Preparing
+691cded49eda: Preparing
+ae7b8bf407ae: Preparing
+3b7939c395bc: Preparing
+04b6df205788: Preparing
+832439eadb07: Preparing
+0ad3ddf4a4ce: Preparing
+3aace1c94832: Waiting
+61efd47635a8: Waiting
+c923ffbdf6a7: Waiting
+b52f61e16e27: Waiting
+691cded49eda: Waiting
+ae7b8bf407ae: Waiting
+3b7939c395bc: Waiting
+04b6df205788: Waiting
+832439eadb07: Waiting
+0ad3ddf4a4ce: Waiting
+89fbca15ee89: Pushed
+029ef915a322: Pushed
+df082735922f: Pushed
+c923ffbdf6a7: Layer already exists
+ff61a758155d: Pushed
+1f3a5420c2b8: Pushed
+b52f61e16e27: Layer already exists
+691cded49eda: Layer already exists
+ae7b8bf407ae: Layer already exists
+3b7939c395bc: Layer already exists
+61efd47635a8: Pushed
+04b6df205788: Layer already exists
+832439eadb07: Layer already exists
+0ad3ddf4a4ce: Layer already exists
+3aace1c94832: Pushed
+sleep_test: digest: sha256:41bae23dba1551ba3975d66f2965db7d712fe1e3f77e61ff48db479eabcaef6e size: 3469
+Removing login credentials for https://index.docker.io/v1/
+Deploying function...
+{
+    "FunctionName": "sleep_test",
+    "FunctionArn": "arn:aws:lambda:us-east-2:975118141701:function:sleep_test",
+    "Role": "arn:aws:iam::975118141701:role/service-role/sleep_test-role-6t1zk20q",
+    "CodeSize": 0,
+    "Description": "",
+    "Timeout": 603,
+    "MemorySize": 2200,
+    "LastModified": "2022-07-22T00:58:31.000+0000",
+    "CodeSha256": "41bae23dba1551ba3975d66f2965db7d712fe1e3f77e61ff48db479eabcaef6e",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "2cd0c526-41cb-4d6b-9391-b4d558db8a03",
+    "State": "Active",
+    "LastUpdateStatus": "InProgress",
+    "LastUpdateStatusReason": "The function is being created.",
+    "LastUpdateStatusReasonCode": "Creating",
+    "PackageType": "Image",
+    "ImageConfigResponse": {},
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    }
+}

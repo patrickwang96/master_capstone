@@ -1,0 +1,69 @@
+The push refers to repository [docker.io/patrickwang96/saaf-functions]
+c3252829c987: Preparing
+fc1fcda67eb2: Preparing
+382ed59c38c7: Preparing
+7b66c620e14a: Preparing
+060e2191ef73: Preparing
+af7b6d5b2394: Preparing
+b88b1c196c3f: Preparing
+a04aeedc9e7e: Preparing
+8231341409fe: Preparing
+a8c172ef3ae3: Preparing
+d7da05e8bccf: Preparing
+3ceefa00cdd4: Preparing
+5a6d409efc59: Preparing
+ebbdbbce815d: Preparing
+bed6a2f0d977: Preparing
+b0727fdb7b1f: Preparing
+7dc9b00d9665: Preparing
+125ca4aa6cd7: Preparing
+2ae894ab777f: Preparing
+6db3d1445d34: Preparing
+f36cbdef5e3a: Preparing
+1c721e0a3622: Preparing
+6680d5caa699: Preparing
+4dd0c5812fd4: Preparing
+ebbdbbce815d: Waiting
+bed6a2f0d977: Waiting
+b0727fdb7b1f: Waiting
+7dc9b00d9665: Waiting
+125ca4aa6cd7: Waiting
+2ae894ab777f: Waiting
+6db3d1445d34: Waiting
+f36cbdef5e3a: Waiting
+1c721e0a3622: Waiting
+6680d5caa699: Waiting
+af7b6d5b2394: Waiting
+4dd0c5812fd4: Waiting
+a04aeedc9e7e: Waiting
+8231341409fe: Waiting
+a8c172ef3ae3: Waiting
+b88b1c196c3f: Waiting
+d7da05e8bccf: Waiting
+5a6d409efc59: Waiting
+3ceefa00cdd4: Waiting
+c3252829c987: Layer already exists
+7b66c620e14a: Layer already exists
+060e2191ef73: Layer already exists
+382ed59c38c7: Layer already exists
+fc1fcda67eb2: Layer already exists
+af7b6d5b2394: Layer already exists
+a8c172ef3ae3: Layer already exists
+a04aeedc9e7e: Layer already exists
+b88b1c196c3f: Layer already exists
+8231341409fe: Layer already exists
+d7da05e8bccf: Layer already exists
+5a6d409efc59: Layer already exists
+bed6a2f0d977: Layer already exists
+3ceefa00cdd4: Layer already exists
+ebbdbbce815d: Layer already exists
+b0727fdb7b1f: Layer already exists
+7dc9b00d9665: Layer already exists
+6db3d1445d34: Layer already exists
+2ae894ab777f: Layer already exists
+125ca4aa6cd7: Layer already exists
+f36cbdef5e3a: Layer already exists
+6680d5caa699: Layer already exists
+1c721e0a3622: Layer already exists
+4dd0c5812fd4: Layer already exists
+cache_exp_ibm: digest: sha256:aa222d1a760e1e7802d20d0a1ba43f81a3fc995e92926091cec366179dcd54fe size: 5362

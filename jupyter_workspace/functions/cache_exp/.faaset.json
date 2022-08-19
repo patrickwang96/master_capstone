@@ -1,0 +1,14 @@
+{
+    "source_hash": "IiIiIEFVVE9NQVRJQ0FMTFkgQ09NTUVOVEVEIE9VVCBCWSBGYWFTRVQgCkBGYWFTRVQuY2xvdWRfZnVuY3Rpb24ocGxhdGZvcm09IklCTSBEb2NrZXIiKQoiIiIKCmRlZiB5b3VyRnVuY3Rpb24ocmVxdWVzdCwgY29udGV4dCk6IAogICAgcmV0dXJuIHsibWVzc2FnZSI6ICJEdW1teSBGdW5jdGlvbiJ9ICAgCg==",
+    "name": "cache_exp",
+    "platform": "IBM Docker",
+    "config": {
+        "id": "IBM Docker",
+        "faas_runner_platform": "IBM",
+        "location": "./platforms/ibm_docker",
+        "runtime": "python:3.9",
+        "memory": 512,
+        "timeout": 300000,
+        "function_name": "cache_exp"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "source_hash": "IiIiIEFVVE9NQVRJQ0FMTFkgQ09NTUVOVEVEIE9VVCBCWSBGYWFTRVQgCkBGYWFTRVQuY2xvdWRfZnVuY3Rpb24ocGxhdGZvcm09IkFXUyBEb2NrZXIgRGViaWFuIiwgY29uZmlnPXsibWVtb3J5IjogMjU5fSkKIiIiCgpkZWYgeW91ckZ1bmN0aW9uKHJlcXVlc3QsIGNvbnRleHQpOiAKICAgIGltcG9ydCBzdWJwcm9jZXNzCgogICAgZnJvbSBTQUFGIGltcG9ydCBJbnNwZWN0b3IKICAgIGluc3BlY3RvciA9IEluc3BlY3RvcigpCiAgICBpbnNwZWN0b3IuaW5zcGVjdEFsbCgpCiAgICAKICAgIGNvbW1hbmQgPSAiLi9zdHJlYW0uMTBNIgogICAgbWV0cmljX291dHB1dHMgPSBsaXN0KCkKICAgIGZvciB4IGluIHJhbmdlKDIwKToKICAgICAgICBvdXRwdXQgPSBzdWJwcm9jZXNzLmNoZWNrX291dHB1dChjb21tYW5kLnNwbGl0KCkpLmRlY29kZSgnYXNjaWknKQogICAgICAgIGRhdGEgPSBvdXRwdXQuc3BsaXQoJ1xuJylbMjM6MjddCiAgICAgICAgbWV0cmljID0gbGlzdChtYXAobGFtYmRhIGk6IGxpc3QobWFwKGZsb2F0LCBpLnNwbGl0KClbMTpdKSksIGRhdGEpKQogICAgICAgIG1ldHJpY19vdXRwdXRzLmFwcGVuZChtZXRyaWMpCiAgICBpbnNwZWN0b3IuYWRkQXR0cmlidXRlKCJzdHJlYW1fbWV0cmljIiwgbWV0cmljX291dHB1dHMpCiAgICBpbnNwZWN0b3IuaW5zcGVjdEFsbERlbHRhcygpCiAgICByZXR1cm4gaW5zcGVjdG9yLmZpbmlzaCgpCg==",
+    "name": "hello_world_c",
+    "platform": "AWS Docker Debian",
+    "config": {
+        "memory": 259,
+        "id": "AWS Docker Debian",
+        "faas_runner_platform": "AWS Lambda",
+        "location": "./platforms/aws_docker_debian",
+        "role": "arn:aws:iam::616835888336:role/service-role/simple_microservice_role",
+        "subnets": "",
+        "security_groups": "",
+        "timeout": 900,
+        "profile": "default",
+        "function_name": "hello_world_c"
+    },
+    "stats": {
+        "invocations": 3361,
+        "total_runtime": 48166992
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "source_hash": "IiIiIEFVVE9NQVRJQ0FMTFkgQ09NTUVOVEVEIE9VVCBCWSBGYWFTRVQgCkBGYWFTRVQuY2xvdWRfZnVuY3Rpb24ocGxhdGZvcm09IkFXUyBEb2NrZXIgRGViaWFuIiwgY29uZmlnPXsibWVtb3J5IjogMjU5fSkKIiIiCgpkZWYgeW91ckZ1bmN0aW9uKHJlcXVlc3QsIGNvbnRleHQpOiAKICAgIGltcG9ydCBzdWJwcm9jZXNzLCBkYXRldGltZSwgdGltZQoKICAgIGZyb20gU0FBRiBpbXBvcnQgSW5zcGVjdG9yCiAgICBpbnNwZWN0b3IgPSBJbnNwZWN0b3IoKQogICAgaW5zcGVjdG9yLmluc3BlY3RBbGwoKQogICAgCiMgICAgIGNvbW1hbmQgPSAiL3Zhci90YXNrL2xsY2JlbmNoL2NhY2hlYmVuY2gvY2FjaGViZW5jaCAtdyAtZDEgLXgxIC1tMjAgLWUxIgoKICAgIGNvbW1hbmQgPSAic2xlZXAgNG0iIAojICAgICBjb21tYW5kID0gInN0ZGJ1ZiAtaTAgLW8wIC1lMCAvdmFyL3Rhc2svbGxjYmVuY2gvY2FjaGViZW5jaC9jYWNoZWJlbmNoIC13IC1kMSAteDEgLW0xMCAtZTEgfCB0cyAnWyVZLSVtLSVkICVIOiVNOiUuU10nIgogICAgc3RhcnRfdGltZSA9IGZsb2F0KHJlcXVlc3RbJ3N0YXJ0X3RpbWUnXSkKICAgIHByaW50KCJzdGFydCB0aW1lIGlzOiB7fSIuZm9ybWF0KHN0YXJ0X3RpbWUpKQogICAgCiAgICBub3cgPSBkYXRldGltZS5kYXRldGltZS5ub3coKS50aW1lc3RhbXAoKQogICAgaWYgc3RhcnRfdGltZSA+PSBub3c6CiAgICAgICAgdGltZS5zbGVlcChzdGFydF90aW1lIC0gbm93KQogICAgICAgIAogICAgb3V0cHV0ID0gc3VicHJvY2Vzcy5jaGVja19vdXRwdXQoY29tbWFuZC5zcGxpdCgpKS5kZWNvZGUoJ2FzY2lpJykKCiMgICAgIGluc3BlY3Rvci5hZGRBdHRyaWJ1dGUoImNhY2hlX2JlbmNoX21ldHJpYyIsIG91dHB1dCkKICAgIGluc3BlY3Rvci5pbnNwZWN0QWxsRGVsdGFzKCkKICAgIHJldHVybiBpbnNwZWN0b3IuZmluaXNoKCkK",
+    "name": "sleep_test",
+    "platform": "AWS Docker Debian",
+    "config": {
+        "memory": 259,
+        "id": "AWS Docker Debian",
+        "faas_runner_platform": "AWS Lambda",
+        "location": "./platforms/aws_docker_debian",
+        "role": "arn:aws:iam::616835888336:role/service-role/simple_microservice_role",
+        "subnets": "",
+        "security_groups": "",
+        "timeout": 900,
+        "profile": "default",
+        "function_name": "sleep_test"
+    },
+    "stats": {
+        "invocations": 3,
+        "total_runtime": 240017
+    }
+}
